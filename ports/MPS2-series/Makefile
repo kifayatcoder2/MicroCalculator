@@ -16,7 +16,7 @@ ifeq ($(filter $(TARGET),$(VALID_TARGETS)),)
 $(error Unknown TARGET '$(TARGET)'. Valid targets: $(VALID_TARGETS))
 endif
 
-CROSS    = arm-none-eabi-
+CROSS   ?= arm-none-eabi-
 CC       = $(CROSS)gcc
 OBJDUMP  = $(CROSS)objdump
 SIZE     = $(CROSS)size
